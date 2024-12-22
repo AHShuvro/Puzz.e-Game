@@ -1,0 +1,108 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/bg.jpg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overly-bg {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+
+.title {
+    position: absolute;
+    top: 130px;
+    font-size: 45px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(80, 217, 251);
+    z-index: 20;
+}
+
+.reset-btn {
+    position: absolute;
+    bottom: 80px;
+    color: rgb(10, 43, 50);
+    background-color: rgb(48, 214, 255);
+    padding: 10px 20px;
+    z-index: 20;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: rgba(16, 38, 47, 0.711);
+    color: rgb(234, 243, 250);
+}
+
+.puzzle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 160px;
+}
+
+.puzzle-drag {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    cursor: grab;
+}
+
+.puzzle-box-drag {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(3, 7, 38, 0.4);
+    z-index: 20;
+    box-shadow: 2px 2px 10px rgb(0, 254, 119), -2px -2px -10px rgb(5, 199, 243);
+}
+
+.images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: var(--img);
+    background-size: cover;
+}
+
+.puzzle-drop {
+    position: relative;
+    width: 350px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.puzzle-box-drop {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(3, 7, 38, 0.4);
+    z-index: 20;
+
+}
+
+
+
